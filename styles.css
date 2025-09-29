@@ -1,10 +1,10 @@
 /* CSS Custom Properties for Theme Management */
 :root {
     /* Light Theme Colors */
-    --primary-color: #4A90E2;
-    --primary-light: #6BA3F0;
-    --primary-dark: #357ABD;
-    --secondary-color: #7B68EE;
+    --primary-color: #ffc000;
+    --primary-light: #ffcc33;
+    --primary-dark: #e6ad00;
+    --secondary-color: #000000;
     --accent-color: #50C878;
     
     /* Neutral Colors */
@@ -313,6 +313,26 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
 }
+
+.btn-preview {
+    background: linear-gradient(135deg, var(--text-secondary), var(--text-tertiary));
+    color: var(--white);
+    margin-left: var(--spacing-sm);
+}
+
+.btn-preview:hover {
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resource-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
 
 /* Comments Section */
 .comments {

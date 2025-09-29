@@ -56,6 +56,20 @@ window.addEventListener('scroll', function() {
 // Set website to always use light theme
 document.documentElement.setAttribute('data-theme', 'light');
 
+// PDF Preview functionality - Opens PDF in new popup window
+function openPreview(pdfFile) {
+    // Open PDF in a new popup window
+    const popup = window.open(pdfFile, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+    
+    // Focus the popup window
+    if (popup) {
+        popup.focus();
+    } else {
+        // Fallback if popup is blocked
+        alert('Popup blocked! Please allow popups for this site or use the download button instead.');
+    }
+}
+
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
