@@ -431,7 +431,7 @@ body {
     padding: var(--spacing-2xl) 0;
     position: relative;
     z-index: 2;
-    margin-top: 0;
+    margin-top: var(--spacing-3xl);
 }
 
 .footer-content {
