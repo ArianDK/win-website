@@ -1,5 +1,5 @@
 # W.I.N — Wealth Insured Navigation
-
+<img src=".\images\icon.png" alt="rice" width="100" align="right"/>
 A modern, minimalist website providing financial literacy resources for students and young adults. Built with clean design principles and optimized for GitHub Pages hosting.
 
 ## Overview
@@ -28,18 +28,19 @@ win-website/
 ├── generate-placeholders.html # Tool for creating team placeholder images
 ├── images/                 # Team member photos
 │   ├── rafaey.jpeg        # Rafaey's professional headshot
-│   └── arian.jpg          # Arian's professional headshot
+│   ├── arian.jpg          # Arian's professional headshot
+│   └── icon.png           # W.I.N icon
 ├── WIN FINANCE BOOK PACK.pdf # Financial literacy resource
 └── WIN RESOURCE PACK.pdf  # Student resource pack
 ```
 
-#### Color Scheme
+### Color Scheme
 The website uses CSS custom properties for easy customization. Main colors are defined in the `:root` selector:
 
 ```css
 :root {
-    --primary-color: #4A90E2;      /* Main blue */
-    --secondary-color: #7B68EE;    /* Purple accent */
+    --primary-color: #ffc000;      /* Main yellow/gold */
+    --secondary-color: #000000;    /* Black accent */
     --accent-color: #50C878;       /* Green accent */
     --text-primary: #202124;       /* Dark text */
     --text-secondary: #5F6368;     /* Secondary text */
@@ -71,35 +72,6 @@ The website uses CSS custom properties for easy customization. Main colors are d
 - Keyboard navigation support
 - Screen reader compatibility
 - High contrast ratios
-
-## Development
-
-### Local Development
-1. Open the project in your preferred code editor
-2. Use a local server (Live Server extension, Python's http.server, etc.)
-3. Make changes and test in your browser
-4. Commit and push changes to GitHub for deployment
-
-### Code Structure
-- **HTML**: Semantic markup with proper structure
-- **CSS**: Mobile-first responsive design with CSS Grid and Flexbox
-- **JavaScript**: Vanilla JS with modern ES6+ features
-- **No Dependencies**: Pure HTML, CSS, and JavaScript implementation
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## Support
-
-For technical support or questions about the W.I.N website:
-- Create an issue in the GitHub repository
-- Contact the development team through the website
-- Review the documentation and troubleshooting guide
 
 ## License
 
