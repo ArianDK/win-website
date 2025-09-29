@@ -426,8 +426,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--gray-900);
-    color: var(--white);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     padding: var(--spacing-2xl) 0;
     position: relative;
     z-index: 2;
@@ -450,7 +450,7 @@ body {
 }
 
 .footer-brand p {
-    color: var(--gray-400);
+    color: var(--text-secondary);
     font-size: var(--font-size-sm);
 }
 
@@ -460,7 +460,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--gray-400);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: var(--transition-fast);
 }
@@ -470,7 +470,7 @@ body {
 }
 
 .footer-social p {
-    color: var(--gray-500);
+    color: var(--text-tertiary);
     font-size: var(--font-size-sm);
 }
 
