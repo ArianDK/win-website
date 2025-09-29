@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 2px solid #ddd;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        .download-btn {
+            background: #4A90E2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Team Member Placeholder Images</h1>
+        <p>This tool generates placeholder images for Rafaey and Arian. Click the buttons below to generate and download the images.</p>
+        
+        <div id="images"></div>
+        
+        <script>
+            function generatePlaceholder(name, initials, bgColor, textColor = '#ffffff') {
+                const canvas = document.createElement('canvas');
+                canvas.width = 300;
+                canvas.height = 300;
+                const ctx = canvas.getContext('2d');
+                
+                // Draw circle background
+                ctx.beginPath();
+                ctx.arc(150, 150, 150, 0, 2 * Math.PI);
+                ctx.fillStyle = bgColor;
+                ctx.fill();
+                
+                // Add text
+                ctx.fillStyle = textColor;
+                ctx.font = 'bold 60px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(initials, 150, 150);
+                
+                // Add name below
+                ctx.font = '20px Arial';
+                ctx.fillText(name, 150, 220);
+                
+                return canvas;
+            }
+            
+            function downloadCanvas(canvas, filename) {
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL();
+                link.click();
+            }
+            
+            // Generate Rafaey's placeholder
+            const rafaeyCanvas = generatePlaceholder('Rafaey', 'RA', '#4A90E2');
+            rafaeyCanvas.id = 'rafaey-canvas';
+            document.getElementById('images').appendChild(rafaeyCanvas);
+            
+            const rafaeyBtn = document.createElement('button');
+            rafaeyBtn.className = 'download-btn';
+            rafaeyBtn.textContent = 'Download Rafaey Image';
+            rafaeyBtn.onclick = () => downloadCanvas(rafaeyCanvas, 'rafaey.jpg');
+            document.getElementById('images').appendChild(rafaeyBtn);
+            
+            // Generate Arian's placeholder
+            const arianCanvas = generatePlaceholder('Arian', 'AR', '#7B68EE');
+            arianCanvas.id = 'arian-canvas';
+            document.getElementById('images').appendChild(arianCanvas);
+            
+            const arianBtn = document.createElement('button');
+            arianBtn.className = 'download-btn';
+            arianBtn.textContent = 'Download Arian Image';
+            arianBtn.onclick = () => downloadCanvas(arianCanvas, 'arian.jpg');
+            document.getElementById('images').appendChild(arianBtn);
+        </script>
+    </div>
+</body>
+</html>
