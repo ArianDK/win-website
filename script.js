@@ -53,67 +53,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Theme switching functionality
-class ThemeManager {
-    constructor() {
-        this.currentTheme = localStorage.getItem('theme') || 'light';
-        this.init();
-    }
-
-    init() {
-        this.applyTheme(this.currentTheme);
-        this.createThemeToggle();
-    }
-
-    applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        this.currentTheme = theme;
-        localStorage.setItem('theme', theme);
-    }
-
-    toggleTheme() {
-        const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
-        this.applyTheme(newTheme);
-    }
-
-    createThemeToggle() {
-        // Create theme toggle button
-        const themeToggle = document.createElement('button');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        themeToggle.className = 'theme-toggle';
-        themeToggle.setAttribute('aria-label', 'Toggle theme');
-        themeToggle.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            cursor: pointer;
-            z-index: 1001;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
-        `;
-
-        themeToggle.addEventListener('click', () => {
-            this.toggleTheme();
-            const icon = themeToggle.querySelector('i');
-            icon.className = this.currentTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
-        });
-
-        // Update icon based on current theme
-        const icon = themeToggle.querySelector('i');
-        icon.className = this.currentTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-
-        document.body.appendChild(themeToggle);
-    }
-}
-
-// Initialize theme manager
-const themeManager = new ThemeManager();
+// Set website to always use light theme
+document.documentElement.setAttribute('data-theme', 'light');
 
 // Intersection Observer for animations
 const observerOptions = {
