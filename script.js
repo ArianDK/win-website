@@ -225,3 +225,54 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// Giscus width constraint - More aggressive approach
+function constrainGiscusWidth() {
+    const wrapper = document.querySelector('.giscus-wrapper');
+    const giscusContainer = document.getElementById('giscus-comments');
+    
+    if (wrapper && giscusContainer) {
+        // Set wrapper to fixed width
+        wrapper.style.width = '50%';
+        wrapper.style.maxWidth = '600px';
+        wrapper.style.margin = '0 auto';
+        wrapper.style.overflow = 'hidden';
+        
+        // Force all iframes and Giscus elements to respect wrapper bounds
+        const allElements = wrapper.querySelectorAll('*');
+        allElements.forEach(element => {
+            element.style.maxWidth = '100%';
+            element.style.width = '100%';
+            element.style.boxSizing = 'border-box';
+        });
+        
+        // Specifically target iframes
+        const iframes = wrapper.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            iframe.style.width = '100%';
+            iframe.style.maxWidth = '100%';
+            iframe.style.minWidth = '0';
+            iframe.style.boxSizing = 'border-box';
+        });
+    }
+}
+
+// Run when Giscus loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for Giscus iframe periodically with more frequent checks
+    const checkGiscus = setInterval(() => {
+        const giscusIframe = document.querySelector('#giscus-comments iframe');
+        if (giscusIframe) {
+            constrainGiscusWidth();
+            clearInterval(checkGiscus);
+        }
+    }, 500);
+    
+    // Run multiple times to catch different loading stages
+    setTimeout(constrainGiscusWidth, 1000);
+    setTimeout(constrainGiscusWidth, 2000);
+    setTimeout(constrainGiscusWidth, 5000);
+    
+    // Also run on window resize
+    window.addEventListener('resize', constrainGiscusWidth);
+});
