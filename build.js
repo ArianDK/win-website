@@ -10,6 +10,7 @@ if (!fs.existsSync(publicDir)) {
 }
 
 // Files and directories to copy
+// NOTE: Do NOT copy the 'api' directory - it must stay in root for Vercel to detect serverless functions
 const itemsToCopy = [
   'index.html',
   'about.html',
