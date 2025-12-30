@@ -4,7 +4,7 @@
   "description": "W.I.N - Wealth Insured Navigation website with custom comment system",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build step required for static site'"
+    "build": "node build.js"
   },
   "dependencies": {
     "@vercel/postgres": "^0.5.1"
