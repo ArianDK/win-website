@@ -4,10 +4,22 @@
 import { sql } from '@vercel/postgres';
 
 export default async function handler(req, res) {
-  // Only allow GET and POST methods
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+  try {
+    // Set CORS headers
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    // Handle preflight
+    if (req.method === 'OPTIONS') {
+      return res.status(200).end();
+    }
+
+    // Only allow GET and POST methods
+    if (req.method !== 'GET' && req.method !== 'POST') {
+      return res.status(405).json({ error: 'Method not allowed' });
+    }
 
   // Handle GET request
   if (req.method === 'GET') {
@@ -48,7 +60,10 @@ export default async function handler(req, res) {
       });
     } catch (error) {
       console.error('Error fetching comments:', error);
-      return res.status(500).json({ error: 'Failed to fetch comments' });
+      return res.status(500).json({ 
+        error: 'Failed to fetch comments',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      });
     }
   }
 
@@ -118,8 +133,18 @@ export default async function handler(req, res) {
       });
     } catch (error) {
       console.error('Error posting comment:', error);
-      return res.status(500).json({ error: 'Failed to post comment' });
+      return res.status(500).json({ 
+        error: 'Failed to post comment',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      });
     }
+  } catch (error) {
+    // Catch any unhandled errors
+    console.error('Unhandled API error:', error);
+    return res.status(500).json({ 
+      error: 'Internal server error',
+      message: error.message || 'An unexpected error occurred'
+    });
   }
 }
 

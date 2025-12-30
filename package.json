@@ -1,7 +1,7 @@
 {
   "name": "win-website",
   "version": "1.0.0",
-  "description": "W.I.N - Wealth Insured Navigation website with custom comment system",
+  "description": "W.I.N - Wealth Insured Navigation",
   "scripts": {
     "dev": "vercel dev",
     "build": "node build.js"
