@@ -26,3 +26,8 @@ yarn.lock
 .DS_Store
 Thumbs.db
 
+
+/generated/prisma
+
+.env
+.env*.local
