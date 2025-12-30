@@ -1,0 +1,17 @@
+{
+  "name": "win-website",
+  "version": "1.0.0",
+  "description": "W.I.N - Wealth Insured Navigation website with custom comment system",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static site'"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.5.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+
