@@ -1,4 +1,5 @@
 // Build script to prepare public directory for Vercel
+// Using .cjs extension to keep CommonJS syntax while package.json has "type": "module"
 const fs = require('fs');
 const path = require('path');
 
