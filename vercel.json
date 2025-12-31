@@ -1,6 +1,0 @@
-{
-  "outputDirectory": "public",
-  "installCommand": "npm install",
-  "cleanUrls": true
-}
-

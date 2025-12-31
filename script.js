@@ -181,8 +181,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Giscus width constraint - DISABLED (Giscus is now commented out)
-/*
+// Giscus width constraint - More aggressive approach
 function constrainGiscusWidth() {
     const wrapper = document.querySelector('.giscus-wrapper');
     const giscusContainer = document.getElementById('giscus-comments');
@@ -232,4 +231,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Also run on window resize
     window.addEventListener('resize', constrainGiscusWidth);
 });
-*/
