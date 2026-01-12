@@ -1,34 +1,37 @@
-# W.I.N — Wealth Insured Navigation
-<img src=".\images\icon.png" alt="rice" width="100" align="right"/>
-A modern, minimalist website providing financial literacy resources for students and young adults. Built with clean design principles and optimized for GitHub Pages hosting.
+# Economic & Finance Association (EFA) + W.I.N
+<img src=".\images\icon.png" alt="EFA / WIN icon" width="96" align="right"/>
+A modern, responsive site for the Economic & Finance Association (EFA) at Houston City College, with the legacy W.I.N experience preserved as a subpage.
 
 ## Overview
 
-W.I.N (Wealth Insured Navigation) is a comprehensive platform designed to make financial literacy accessible to students and young adults. The website features downloadable resources, team information, and an integrated comments system for community engagement.
+- **EFA Homepage**: Yellow/black modern landing page with About, Leadership, Founders, and Contact/Join sections.
+- **WIN Subpage**: The original W.I.N (Wealth Insured Navigation) site remains intact under `/win/` with its PDFs and comments.
+- **Routing**: Static HTML; root `index.html` is EFA. WIN lives at `win/index.html` with a “Back to EFA” link.
 
 ## Key Features
 
-- **Clean Light Theme**: Professional, minimalist design with a consistent light color palette
-- **Fully Responsive**: Optimized for all devices and screen sizes with mobile-first approach
-- **Static Site Ready**: Built specifically for GitHub Pages hosting with no server dependencies
-- **Comments System**: Integrated Giscus comments for static site functionality
-- **Performance Optimized**: Fast loading with lazy loading, smooth animations, and efficient code
-- **Accessibility Compliant**: WCAG guidelines followed with proper focus management and semantic HTML
+- **Modern EFA Theme**: Sticky blurred navbar, hero, value cards, leadership grid, founders, contact form.
+- **Reusable Data**: Leadership and founder data rendered from a single source (`efa.js`).
+- **Responsive & Accessible**: Keyboard-friendly nav, focus styles, smooth scrolling, section reveal animations.
+- **WIN Preserved**: Original WIN resources, styling, and Giscus comments served under `/win/`.
 
 ## Project Structure
 
 ```
 win-website/
-├── index.html              # Homepage with hero section and resources
-├── about.html              # About us page with team information
-├── styles.css              # Main stylesheet with CSS custom properties
-├── script.js               # JavaScript functionality and interactions
-├── sw.js                   # Service worker for offline functionality
-├── README.md               # Project documentation
-├── generate-placeholders.html # Tool for creating team placeholder images
-├── images/                 # Team member photos & icon
-├── WIN FINANCE BOOK PACK.pdf # Financial literacy resource
-└── WIN RESOURCE PACK.pdf  # Student resource pack
+├── index.html                  # EFA homepage (primary entry)
+├── efa.css                     # EFA styles
+├── efa.js                      # EFA interactions + data rendering
+├── assets/
+│   └── placeholder-profile.svg # Avatar placeholder
+├── images/                     # Shared icons/photos
+├── WIN FINANCE BOOK PACK.pdf   # WIN PDF
+├── WIN RESOURCE PACK.pdf       # WIN PDF
+└── win/
+    ├── index.html              # WIN homepage (subpage)
+    ├── about.html              # WIN about page
+    ├── styles.css              # WIN styling (legacy)
+    └── script.js               # WIN interactions (legacy)
 ```
 
 ### Color Scheme

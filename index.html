@@ -3,138 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W.I.N</title>
+    <title>Economic & Finance Association | Houston City College</title>
+    <meta name="description" content="Economic & Finance Association (EFA) at Houston City College — where ambition meets discipline. We analyze, innovate, and lead to turn financial insight into real-world impact.">
+    <meta property="og:title" content="Economic & Finance Association | Houston City College">
+    <meta property="og:description" content="Where ambition meets discipline. EFA forges visionaries who analyze, innovate, and lead.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://efa.hcc.example">
     <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="efa.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h1>W.I.N</h1>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Homepage</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About us</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">W.I.N</h1>
-                <p class="hero-subtitle">Wealth Insured Navigation</p>
-                <p class="hero-description">
-                    Your source for practical financial literacy and student resources. Access free guides on money management, career tools, and educational support to help you build a secure future.
-                </p>
-            </div>
-        </section>
-
-        <!-- Resources Section -->
-        <section class="resources">
-            <div class="container">
-                <h2 class="section-title">Free Resources</h2>
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <div class="resource-icon">
-                            <i class="fas fa-book"></i>
+<body id="top">
+    <main>
+        <section class="hero section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Houston City College • Student Leadership</p>
+                    <h1><span>EFA</span> Economic & Finance Association</h1>
+                    <p class="lede">Economic & Finance Association — Houston City College. Where ambition meets discipline, EFA forges visionaries who analyze, innovate, and lead.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="https://eagleengage.hccs.edu/organization/efa" target="_blank" rel="noopener noreferrer">Join EFA</a>
+                        <a class="btn ghost" href="win/index.html" target="_blank" rel="noopener noreferrer">Explore WIN</a>
+                    </div>
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <span class="meta-number">2025–2026</span>
+                            <span class="meta-label">Leadership Board</span>
                         </div>
-                        <h3>Financial Literacy Book</h3>
-                        <p>Student-friendly financial literacy ebook covering savings, budgeting, credit, financial aid, investing, banking, insurance, and scam awareness, with practical tips and examples.</p>
-                        <div class="resource-actions">
-                            <a href="WIN FINANCE BOOK PACK.pdf" class="btn btn-primary" download>
-                                <i class="fas fa-download"></i>
-                                Download PDF
-                            </a>
-                            <button class="btn btn-preview" onclick="openPreview('WIN FINANCE BOOK PACK.pdf')">
-                                <i class="fas fa-eye"></i>
-                                Preview
-                            </button>
+                        <div class="meta-item">
+                            <span class="meta-number">Student-led</span>
+                            <span class="meta-label">Research & Markets</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-number">HCC</span>
+                            <span class="meta-label">Community Impact</span>
                         </div>
                     </div>
-                    <div class="resource-card">
-                        <div class="resource-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="hero-card reveal">
+                    <div class="glass-card">
+                        <div class="badge-row">
+                            <span class="pill">Strategy</span>
+                            <span class="pill">Innovation</span>
+                            <span class="pill">Leadership</span>
                         </div>
-                        <h3>Free Resource Book</h3>
-                        <p>Curated student resource pack with Texas/Houston assistance, open textbooks, free courses, study tools, software perks, and career/college-aid links.</p>
-                        <div class="resource-actions">
-                            <a href="WIN RESOURCE PACK.pdf" class="btn btn-primary" download>
-                                <i class="fas fa-download"></i>
-                                Download PDF
-                            </a>
-                            <button class="btn btn-preview" onclick="openPreview('WIN RESOURCE PACK.pdf')">
-                                <i class="fas fa-eye"></i>
-                                Preview
-                            </button>
+                        <div class="hero-stats">
+                            <div>
+                                <p class="stat-label">Mission</p>
+                                <p class="stat-value">Analyze, innovate, lead.</p>
+                            </div>
+                            <div>
+                                <p class="stat-label">Focus</p>
+                                <p class="stat-value">Markets • Research • Execution</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">About Us</p>
+                    <h2 class="section-title">Ambition meets discipline</h2>
+                    <p class="section-subtitle">We analyze, innovate, and lead, empowering students to turn financial insight into real-world impact and set the standard for leadership.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <h3>Summary</h3>
+                        <p>Where ambition meets discipline, the Economic & Finance Association (EFA) forges visionaries. We analyze, innovate, and lead, empowering students to turn financial insight into real-world impact and setting the standard for leadership.</p>
+                    </div>
+                    <div class="about-card reveal">
+                        <h3>Full Description</h3>
+                        <p>The Economic & Finance Association (EFA) is more than a student organization, it’s a movement of forward-thinking leaders driven by purpose, discipline, and innovation. At EFA, ambition meets execution. Our members are future economists, investors, policymakers, and entrepreneurs who don’t just react to change, they create it.</p>
+                        <p>We equip our members with analytical tools, strategic mindset, and professional confidence to navigate and shape today’s dynamic financial landscape. Through research, collaboration, and hands-on experience, EFA transforms bold ideas into measurable results. Preparing students to lead in boardrooms, markets, and policy arenas alike.</p>
+                        <p>EFA believes that leadership begins with understanding of markets and people, along with purpose. We challenge our members to think critically, plan strategically, and act decisively. We are not spectators of progress; we are architects building pathways that define the future of finance and economics at Houston City College and beyond.</p>
+                    </div>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card reveal">
+                        <span class="value-icon"><i class="fas fa-chart-line"></i></span>
+                        <h4>Research</h4>
+                        <p>Market analysis and data-driven insights that sharpen decision-making.</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <span class="value-icon"><i class="fas fa-lightbulb"></i></span>
+                        <h4>Innovation</h4>
+                        <p>Turning bold ideas into pilots, projects, and measurable outcomes.</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <span class="value-icon"><i class="fas fa-people-group"></i></span>
+                        <h4>Leadership</h4>
+                        <p>Developing confident, ethical leaders ready for boardrooms and policy arenas.</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <span class="value-icon"><i class="fas fa-briefcase"></i></span>
+                        <h4>Execution</h4>
+                        <p>Hands-on work that converts strategy into tangible impact across HCC.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section leadership" id="leadership">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">2025–2026 Board</p>
+                    <h2 class="section-title">Our Leadership</h2>
+                    <p class="section-subtitle">Built to serve with clarity, creativity, and decisive execution.</p>
+                </div>
+                <div class="card-grid" id="leadership-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section founders" id="founders">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Origin Story</p>
+                    <h2 class="section-title">EFA Founders</h2>
+                    <p class="section-subtitle">The architects who set EFA’s vision in motion.</p>
+                </div>
+                <div class="founder-row" id="founders-list" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Join EFA</p>
+                    <h2 class="section-title">Become a member</h2>
+                    <p class="section-subtitle">Membership is handled through HCC Eagle Engage. Tap below to open the official sign-up page.</p>
+                    <ul class="contact-points">
+                        <li><i class="fas fa-users"></i> Join via Eagle Engage (HCC portal)</li>
+                        <li><i class="fas fa-location-dot"></i> Houston City College</li>
+                        <li><i class="fas fa-share-nodes"></i> WIN resources available via the WIN subpage</li>
+                    </ul>
+                </div>
+                <div class="contact-form-card reveal">
+                    <h3>Join on Eagle Engage</h3>
+                    <p class="small">You’ll be directed to eagleengage.hccs.edu to complete membership.</p>
+                    <a class="btn primary" href="https://eagleengage.hccs.edu/organization/efa" target="_blank" rel="noopener noreferrer">Open Eagle Engage</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Comments Section -->
-    <section class="comments">
-        <div class="container">
-            <h2 class="section-title">Comments & Feedback</h2>
-            <div class="giscus-wrapper">
-                <div id="giscus-comments"></div>
-            </div>
-
-            <script src="script.js"></script>
-            <!-- Giscus Comments - Configure with repository details -->
-            <script src="https://giscus.app/client.js"
-                data-repo="ArianDK/win-website"
-                data-repo-id="R_kgDOP4t6Nw"
-                data-category="Feedback"
-                data-category-id="DIC_kwDOP4t6N84CwA5r"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="top"
-                data-theme="light"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-            </script>
-        </div>
-    </section>
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>W.I.N</h3>
-                    <p>Wealth Insured Navigation</p>
+        <div class="container footer-grid">
+            <div>
+                <div class="brand-inline">
+                    <div class="brand-mark sm" aria-hidden="true">E</div>
+                    <div>
+                        <p class="brand-name">Economic & Finance Association</p>
+                        <p class="brand-sub">Houston City College</p>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="index.html">Homepage</a>
-                    <a href="about.html">About us</a>
-                </div>
-                <div class="footer-social">
-                    <p>&copy; 2025 W.I.N. All rights reserved.</p>
-                </div>
+                <p class="small dim">Where ambition meets discipline. EFA empowers students to create real-world impact.</p>
+            </div>
+            <div>
+                <p class="footer-heading">Explore</p>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#founders">Founders</a></li>
+                    <li><a href="win/index.html" target="_blank" rel="noopener noreferrer">WIN</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Engage</p>
+                <ul class="footer-links">
+                    <li><a href="#contact">Join EFA</a></li>
+                    <li><a href="mailto:efa@hcc.edu">Email</a></li>
+                    <li><a href="#top">Back to top</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Economic & Finance Association — Houston City College. All rights reserved.</p>
+            <div class="socials">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
+    <script src="efa.js" defer></script>
 </body>
 </html>

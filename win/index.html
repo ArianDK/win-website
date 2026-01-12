@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.I.N</title>
+    <link rel="icon" type="image/png" href="../images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>W.I.N</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About us</a>
+                </li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">W.I.N</h1>
+                <p class="hero-subtitle">Wealth Insured Navigation</p>
+                <p class="hero-description">
+                    Your source for practical financial literacy and student resources. Access free guides on money management, career tools, and educational support to help you build a secure future.
+                </p>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="resources">
+            <div class="container">
+                <h2 class="section-title">Free Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Financial Literacy Book</h3>
+                        <p>Student-friendly financial literacy ebook covering savings, budgeting, credit, financial aid, investing, banking, insurance, and scam awareness, with practical tips and examples.</p>
+                        <div class="resource-actions">
+                            <a href="../WIN FINANCE BOOK PACK.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </a>
+                            <button class="btn btn-preview" onclick="openPreview('../WIN FINANCE BOOK PACK.pdf')">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Free Resource Book</h3>
+                        <p>Curated student resource pack with Texas/Houston assistance, open textbooks, free courses, study tools, software perks, and career/college-aid links.</p>
+                        <div class="resource-actions">
+                            <a href="../WIN RESOURCE PACK.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </a>
+                            <button class="btn btn-preview" onclick="openPreview('../WIN RESOURCE PACK.pdf')">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Comments Section -->
+    <section class="comments">
+        <div class="container">
+            <h2 class="section-title">Comments & Feedback</h2>
+            <div class="giscus-wrapper">
+                <div id="giscus-comments"></div>
+            </div>
+
+            <script src="script.js"></script>
+            <!-- Giscus Comments - Configure with repository details -->
+            <script src="https://giscus.app/client.js"
+                data-repo="ArianDK/win-website"
+                data-repo-id="R_kgDOP4t6Nw"
+                data-category="Feedback"
+                data-category-id="DIC_kwDOP4t6N84CwA5r"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>W.I.N</h3>
+                    <p>Wealth Insured Navigation</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Homepage</a>
+                    <a href="about.html">About us</a>
+                </div>
+                <div class="footer-social">
+                    <p>&copy; 2026 W.I.N. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
